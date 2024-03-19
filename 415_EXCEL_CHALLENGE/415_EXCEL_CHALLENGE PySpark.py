@@ -1,3 +1,4 @@
+# My solution using #Pyspark in a #Notebook in #Fabric. See the code in my repository: https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7175702542939549697-smzf?utm_source=share&utm_medium=member_desktop
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, udf
 from pyspark.sql.types import BooleanType, LongType
