@@ -1,3 +1,9 @@
-# 403_EXCEL_CHALLENGE
+# 416_EXCEL_CHALLENGE
 
-![Descripción de la imagen](https://github.com/cristobalsalcedo90/BI_Challenges/blob/d7aa9ed8eb484059783ff448de8326373325d5f6/403_EXCEL_CHALLENGE/403_EXCEL_CHALLENGE.PNG)
+![Descripción de la imagen](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/Problem.PNG)
+
+# My solution using #Pyspark in a #Notebook in #Fabric.
+![Descripción de la imagen](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20PySpark.PNG)
+
+# My solution using #Python in a #Notebook in #Fabric.
+![Descripción de la imagen](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20Python.PNG)
