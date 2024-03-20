@@ -17,7 +17,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 ### Solución usando Power Query
 
-Aquí muestro cómo abordé el desafío usando Power Query, destacando el procesamiento distribuido para manejar datos a gran escala.
+Aquí muestro cómo abordé el desafío usando Power Query.
 
 ![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/413_EXCEL_CHALLENGE/413_EXCEL_CHALLENGE%20Power%20Query.png)
 
