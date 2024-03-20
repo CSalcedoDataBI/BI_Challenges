@@ -9,7 +9,7 @@ El desafío requiere crear:
 Si tiene PivotBy / GroupBy, intente usarlo.
 
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/413_EXCEL_CHALLENGE/ExcelBI.PNG)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/b9e2b669a2ef6cb0c8fe52973f1860a0d12cb5d5/413_EXCEL_CHALLENGE/ExcelBI.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7174252973907197953-Bw6J?utm_source=share&utm_medium=member_desktop)
 
@@ -19,7 +19,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando Power Query, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/413_EXCEL_CHALLENGE/413_EXCEL_CHALLENGE%20Power%20Query.PNG)
+![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/413_EXCEL_CHALLENGE/413_EXCEL_CHALLENGE%20Power%20Query.png)
 
 
 ## ¿Cómo utilizar este repositorio?
