@@ -1,0 +1,31 @@
+let
+    // Extrae la tabla de datos del libro actual.
+    SourceTable = Excel.CurrentWorkbook(){0}[Content],
+
+    // Crea una lista a partir de la columna 'Strings'.
+    StringList = SourceTable[Strings],
+
+    // Define la función que será utilizada para acumular los resultados.
+    AccumulateNumbers = (state, currentString) => 
+        let
+            CurrentStringLength = Text.Length(currentString),
+            UpdatedSequence = if CurrentStringLength > List.Count(state[Sequence]) then
+                                state[Sequence] & {1}
+                              else
+                                List.FirstN(state[Sequence], CurrentStringLength - 1) & { state[Sequence]{CurrentStringLength - 1} + 1 },
+            SequenceAsText = List.Transform(UpdatedSequence, Text.From),
+            CombinedSequence = Text.Combine(SequenceAsText, "."),
+            NewState = [Sequence = UpdatedSequence, AccumulatedData = state[AccumulatedData] & { [Strings = currentString, Answer = CombinedSequence] }]
+        in
+            NewState,
+
+    // Estado inicial para List.Accumulate con una secuencia vacía y una lista de datos acumulados vacía.
+    InitialState = [Sequence = {}, AccumulatedData = {}],
+
+    // Utiliza List.Accumulate para transformar la lista de Strings en una secuencia numérica acumulativa.
+    AccumulationResult = List.Accumulate(StringList, InitialState, AccumulateNumbers),
+
+    // Crea una tabla a partir de los registros acumulados.
+    FinalTable = Table.FromRecords(AccumulationResult[AccumulatedData])
+in
+    FinalTable
