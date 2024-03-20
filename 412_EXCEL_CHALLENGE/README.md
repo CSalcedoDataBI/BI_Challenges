@@ -14,7 +14,7 @@ Iteración 3 = 1^2+3^2+0^2 = 10
 Iteración 4 = 1^2+0^2 = 1
 Por lo tanto, la respuesta es Dígito único final = 1 y Número de iteraciones = 4
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/Problem.PNG)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/7a453665715c9222fd924770dd6cfb5ef3e5768f/412_EXCEL_CHALLENGE/ExcelBI.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7173890586880458752-rEx5?utm_source=share&utm_medium=member_desktop)
 
