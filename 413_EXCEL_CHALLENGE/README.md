@@ -19,7 +19,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando Power Query.
 
-![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/413_EXCEL_CHALLENGE/EXCEL_CHALLENGE_413_PowerQuery.PNG)
+![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/69be2426b0b90b6007e3011bcf4940b97d5ced3e/413_EXCEL_CHALLENGE/EXCEL_CHALLENGE_413_PowerQuery.PNG)
 
 
 ## ¿Cómo utilizar este repositorio?
