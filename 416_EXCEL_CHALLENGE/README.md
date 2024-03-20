@@ -35,7 +35,7 @@ Puede clonar este repositorio y ejecutar los notebooks proporcionados para ver c
 
 Si tienes alguna pregunta o deseas conectarte, no dudes en visitar mi perfil de LinkedIn.
 
-[![Cristobal Salcedo](https://img.shields.io/badge/LinkedIn-Cristobal_Salcedo-blue.svg)](www.linkedin.com/in/cristobal-salcedo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cristobal%20Salcedo-blue)](https://www.linkedin.com/in/cristobal-salcedo)
 
 ---
 
