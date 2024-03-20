@@ -1,4 +1,4 @@
-# 416_EXCEL_CHALLENGE
+# 411_EXCEL_CHALLENGE
 
 Este repositorio contiene mis soluciones al 411 Excel Challenge,tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
@@ -18,13 +18,25 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f3744672f05838d635528fa365981cb6a12d4753/411_EXCEL_CHALLENGE/Challenge%20pyspark%20411.PNG)
 
 ### Solución usando Python en un Notebook en Fabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20Python.PNG)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f3744672f05838d635528fa365981cb6a12d4753/411_EXCEL_CHALLENGE/Challenge%20python%20411.PNG)
+
+### Solución usando Power Query {M}
+
+Aquí está mi solución implementada en Power Query 1.
+
+![Solución PowerQuery](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f3744672f05838d635528fa365981cb6a12d4753/411_EXCEL_CHALLENGE/Challenge%20Power%20Query%20411.PNG)
+
+### Solución usando Power Query {M}
+
+Aquí está mi solución implementada en Power Query 2 dinámica.
+
+![Solución PowerQuery](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f3744672f05838d635528fa365981cb6a12d4753/411_EXCEL_CHALLENGE/Challenge%20Power%20Query%20Dynamic%20411.PNG)
 
 ## ¿Cómo utilizar este repositorio?
 
