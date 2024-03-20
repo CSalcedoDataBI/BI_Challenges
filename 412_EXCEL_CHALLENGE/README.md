@@ -1,17 +1,22 @@
-# 416_EXCEL_CHALLENGE
+# 412_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 416 Excel Challenge, que consiste en generar una secuencia numérica siguiendo una estructura de contorno específica, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 412 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
-El desafío requiere crear una secuencia numérica donde:
-- Si es un solo 'X', la secuencia es 1, 2, 3...
-- Si es doble 'XX', entonces la secuencia es 1.1, 1.2...
-- Si es triple 'XXX', entonces la secuencia es 1.1.1, 1.1.2...
+El desafío:
+Eleva al cuadrado los dígitos individuales de un número y súmalos. Sigue repitiendo este paso hasta que el número se reduzca a un solo dígito. 
+Calcule el dígito final y el número de iteraciones realizadas.
+Ej. 94
+Iteración 1 = 9^2+4^2 = 97
+Iteración 2 = 9^2+7^2 = 130
+Iteración 3 = 1^2+3^2+0^2 = 10
+Iteración 4 = 1^2+0^2 = 1
+Por lo tanto, la respuesta es Dígito único final = 1 y Número de iteraciones = 4
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/Problem.PNG)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176064989001113601-Wq4x)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7173890586880458752-rEx5?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
@@ -19,13 +24,13 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/64458893d54a062188ae62a68dbf37b044c5d93b/412_EXCEL_CHALLENGE/Challenge%20pyspark%20412.PNG)
 
 ### Solución usando Python en un Notebook en Fabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20Python.PNG)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/64458893d54a062188ae62a68dbf37b044c5d93b/412_EXCEL_CHALLENGE/Challenge%20python%20412.PNG)
 
 ## ¿Cómo utilizar este repositorio?
 
