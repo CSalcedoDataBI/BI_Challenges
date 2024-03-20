@@ -1,17 +1,16 @@
 # 416_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 416 Excel Challenge, que consiste en generar una secuencia numérica siguiendo una estructura de contorno específica, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 411 Excel Challenge,tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
-El desafío requiere crear una secuencia numérica donde:
-- Si es un solo 'X', la secuencia es 1, 2, 3...
-- Si es doble 'XX', entonces la secuencia es 1.1, 1.2...
-- Si es triple 'XXX', entonces la secuencia es 1.1.1, 1.1.2...
+El desafío:
+Divida las cadenas de los espacios en celdas, pero los espacios deben ignorarse cuando estén entre comillas dobles.
+Ex. No "volver a casa". Aquí, las respuestas estarán en dos celdas: No y Yendo a casa.
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/416_EXCEL_CHALLENGE/Problem.PNG)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176064989001113601-Wq4x)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7173528233966080000-8Jvu?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
