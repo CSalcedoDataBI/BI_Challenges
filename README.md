@@ -46,7 +46,7 @@ Este proyecto está bajo la [Licencia MIT](LICENSE). Siente la libertad de usarl
 
 ## Agradecimientos
 
-Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176064989001113601-Wq4x?utm_source=share&utm_medium=member_desktop) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
+Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/in/excelbi/) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
 
 ---
 
