@@ -1,4 +1,4 @@
-# 416_EXCEL_CHALLENGE
+# 415_EXCEL_CHALLENGE
 
 Este repositorio contiene mis soluciones al 415 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
@@ -19,7 +19,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/1495221ae98b8544ab496731fa7957a167a3ab13/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20PySpark.PNG)
 
 ### Solución usando Python en un Notebook en Fabric
 

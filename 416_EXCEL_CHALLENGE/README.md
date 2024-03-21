@@ -4,14 +4,15 @@ Este repositorio contiene mis soluciones al 415 Excel Challenge, tal como se des
 
 ## Descripción del Desafío
 
-El desafío requiere crear:
-Un número cíclope es un número que tiene un cero en el centro (por lo tanto, debe tener un número impar de dígitos y >=3 dígitos). El 0 no debe aparecer en ningún otro lugar que no sea en el centro. Por lo tanto, 12035 es un número cíclope, pero 12005 no lo es, ya que hay más de un cero.
-El enésimo número triangular se calcula mediante N(N+1)/2. Por lo tanto, 1, 3, 6, 10, 15... son números triangulares.
-Encuentra la lista de los primeros 100 números triangulares de los cíclopes, es decir, que son tanto cíclopes como triangulares.
+El desafío requiere:
+Genere el esquema numérico.
+Si solo X - 1, 2, 3...
+Si doble X - 1.1, 1.2...
+Si es triple x - 1.1.1. 1.1.2...
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/ExcelBI.PNG)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/1495221ae98b8544ab496731fa7957a167a3ab13/416_EXCEL_CHALLENGE/Problem.PNG)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7175702542939549697-smzf?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176064989001113601-Wq4x?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
@@ -19,13 +20,13 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/1495221ae98b8544ab496731fa7957a167a3ab13/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20PySpark.PNG)
 
 ### Solución usando Python en un Notebook en Fabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20Python.PNG)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/1495221ae98b8544ab496731fa7957a167a3ab13/416_EXCEL_CHALLENGE/416_EXCEL_CHALLENGE%20Python.PNG)
 
 ## ¿Cómo utilizar este repositorio?
 
