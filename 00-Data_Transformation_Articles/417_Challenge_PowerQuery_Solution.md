@@ -1,6 +1,19 @@
+# Transformación de Datos con Power Query: Caso 417_EXCEL_CHALLENGE
+
+Este repositorio documenta mi enfoque y las soluciones detalladas para el "417 Excel Challenge", como se presenta en el desafío original de Excel BI en LinkedIn.
+
+## Descripción del Desafío
+
+El desafío consiste en dividir cadenas de texto en el punto donde ocurre un cambio entre letras del alfabeto y números. Por ejemplo, la cadena "d46c8a" se dividiría en: d, 46, c, 8, a.
+
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/ExcelBI.png)
+
+Puedes encontrar la fuente del desafío en el post de LinkedIn de Excel BI: [Publicación de LinkedIn de Excel BI](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176427310550573056-u5IQ?utm_source=share&utm_medium=member_desktop)
+
 ### Power Query: Transformación de Texto
 
-La solución inicial para el desafío se implementó en Power Query, una herramienta poderosa para la transformación de datos dentro de Excel. Este enfoque permite manipular y preparar datos para análisis de una manera eficiente y escalable, incluso para usuarios sin profundos conocimientos de programación.
+La solución inicial al desafío fue implementada en Power Query, una herramienta potente de transformación de datos que está integrada en Excel. Esta herramienta facilita la manipulación y preparación de datos para análisis de manera eficiente y accesible, incluso para aquellos usuarios que no tienen una experiencia avanzada en programación.
+
 
 #### Descripción del Código
 
