@@ -1,17 +1,16 @@
-# 416_EXCEL_CHALLENGE
+# 417_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 415 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 417 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
-El desafío requiere crear:
-Un número cíclope es un número que tiene un cero en el centro (por lo tanto, debe tener un número impar de dígitos y >=3 dígitos). El 0 no debe aparecer en ningún otro lugar que no sea en el centro. Por lo tanto, 12035 es un número cíclope, pero 12005 no lo es, ya que hay más de un cero.
-El enésimo número triangular se calcula mediante N(N+1)/2. Por lo tanto, 1, 3, 6, 10, 15... son números triangulares.
-Encuentra la lista de los primeros 100 números triangulares de los cíclopes, es decir, que son tanto cíclopes como triangulares.
+El desafío requiere:
+Divida las cadenas dadas cada vez que se produzca un cambio entre el alfabeto inglés y los números.
+Ej. d46c8a - d, 46, c, 8, a.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/ExcelBI.PNG)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/ExcelBI.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7175702542939549697-smzf?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176427310550573056-u5IQ?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
@@ -19,13 +18,25 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PySpark.PNG)
 
 ### Solución usando Python en un Notebook en Fabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4c425ad3d4a63f76840d0d6d84a9b21e18932295/415_EXCEL_CHALLENGE/415_EXCEL_CHALLENGE%20Python.PNG)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_Python.PNG)
+
+### Solución usando Power Query
+
+Aquí está mi solución implementada en Power Query V1.
+
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PowerQuery.PNG)
+
+### Solución usando Power Query
+
+Aquí está mi solución implementada en Power Query V2.
+
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PowerQueryV2.PNG)
 
 ## ¿Cómo utilizar este repositorio?
 
