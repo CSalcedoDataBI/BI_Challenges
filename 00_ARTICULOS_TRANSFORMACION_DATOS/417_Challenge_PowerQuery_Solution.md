@@ -1,4 +1,4 @@
-# Transformación de Datos con Power Query: Caso ![Solucion_Desafio_417_PowerQuery](https://github.com/cristobalsalcedo90/BI_Challenges/tree/main/417_EXCEL_CHALLENGE)
+# ![Explicación a la Solucion del Desafio 417 PowerQuery](https://github.com/cristobalsalcedo90/BI_Challenges/tree/main/417_EXCEL_CHALLENGE)
 
 Este repositorio documenta mi enfoque y las soluciones detalladas para el "417 Excel Challenge", como se presenta en el desafío original de Excel BI en LinkedIn.
 
