@@ -19,7 +19,7 @@ Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamie
 
 ![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_PySpark.png)
 
-Codigo:
+Copiar Codigo aquí:
 ```
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import min, max, col, explode, array
@@ -55,6 +55,32 @@ Aquí está mi solución implementada en Python puro, aprovechando las bibliotec
 
 ![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_Python.png)
 
+Copiar Codigo aquí:
+```
+import pandas as pd
+
+# Cargar los datos
+file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_418 - Pivot on Min and Max .xlsx"
+df = pd.read_excel(file_path, usecols=[0, 1, 2])
+
+# Asegurarse de que 'Time' es un tipo de tiempo
+df['Time'] = pd.to_datetime(df['Time'], format='%H:%M:%S').dt.time
+
+# Agrupar y calcular el tiempo mínimo y máximo para cada grupo
+grouped = df.groupby(['Date', 'Emp ID']).agg(Min_Time=('Time', 'min'), Max_Time=('Time', 'max')).reset_index()
+
+# Expandir los tiempos mínimo y máximo en filas separadas
+min_times = grouped[['Date', 'Emp ID', 'Min_Time']].rename(columns={'Min_Time': 'Time'})
+max_times = grouped[['Date', 'Emp ID', 'Max_Time']].rename(columns={'Max_Time': 'Time'})
+
+expanded_df = pd.concat([min_times, max_times]).sort_values(by=['Date', 'Emp ID', 'Time'])
+
+# Si es necesario resetear el índice
+expanded_df.reset_index(drop=True, inplace=True)
+
+print(expanded_df)
+
+```
 ## ¿Cómo utilizar este repositorio?
 
 Puede clonar este repositorio y ejecutar los notebooks proporcionados para ver cómo se implementaron las soluciones. Se proporcionan instrucciones detalladas dentro de cada notebook.
