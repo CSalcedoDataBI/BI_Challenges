@@ -1,42 +1,29 @@
-# 417_EXCEL_CHALLENGE
+# 418_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 417 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 418 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
 El desafío requiere:
-Divida las cadenas dadas cada vez que se produzca un cambio entre el alfabeto inglés y los números.
-Ej. d46c8a - d, 46, c, 8, a.
+Pivote la tabla dada para las combinaciones de Fecha / ID de Emp con Hora mínima y máxima. La hora mínima y la hora máxima aparecerán en filas alternas. Primero aparecerá el tiempo mínimo y luego el tiempo máximo en la otra fila.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/ExcelBI.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176427310550573056-u5IQ?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7176789688647573505-0c2a?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
-### Solución usando PySpark en un Notebook en Fabric
+### Solución usando PySpark en un Notebook en MicrosoftFabric
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PySpark.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_PySpark.png)
 
-### Solución usando Python en un Notebook en Fabric
+### Solución usando Python en un Notebook en MicrosoftFabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_Python.PNG)
-
-### Solución usando Power Query
-
-Aquí está mi solución implementada en Power Query V1.
-
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PowerQuery.PNG)
-
-### Solución usando Power Query
-
-Aquí está mi solución implementada en Power Query V2.
-
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/61070f6a6771e49ae4d3a438343f95909798dfbb/417_EXCEL_CHALLENGE/417_EXCEL_CHALLENGE_PowerQueryV2.PNG)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_Python.png)
 
 ## ¿Cómo utilizar este repositorio?
 
