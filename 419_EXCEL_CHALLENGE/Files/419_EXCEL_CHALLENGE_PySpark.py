@@ -20,7 +20,7 @@ filtered_df = numbers_df.withColumn("reversed", reverse_number_udf("number")) \
                         .filter(~is_palindrome_udf("reversed")) \
                         .filter(col("reversed") % col("number") == 0)
 
-# Since Spark operates in a distributed manner, we cannot simply take the first 18 elements directly after filtering.
+# Since Spark operates in a distributed manner, we cannot simply take the first 12 elements directly after filtering.
 # A more efficient approach for large datasets is to use show() for direct visualization instead of collecting the data.
-print("The first 18 valid numbers are:")
-filtered_df.select("number").limit(18).show()
+print("The first 12 valid numbers are:")
+filtered_df.select("number").limit(12).show()
