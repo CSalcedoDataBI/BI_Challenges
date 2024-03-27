@@ -15,7 +15,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 ## Soluciones
 
-### Solución usando PySpark en un Notebook en MicrosoftFabric
+### Solución usando PySpark 🚀 en un Notebook en MicrosoftFabric
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
