@@ -59,7 +59,7 @@ Aquí está mi solución implementada en Python puro, aprovechando las bibliotec
 ![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/5753259fc5fc8b86223c736ce1d6643d8aba15f3/419_EXCEL_CHALLENGE/Files/419_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
-```
+```python
 def is_palindrome(number):
   
     return str(number) == str(number)[::-1]

@@ -20,7 +20,7 @@ Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamie
 ![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_PySpark.png)
 
 Copiar Codigo aquí:
-```
+```python
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import min, max, col, explode, array
 import pandas as pd
@@ -56,7 +56,7 @@ Aquí está mi solución implementada en Python puro, aprovechando las bibliotec
 ![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/418_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
-```
+```python
 import pandas as pd
 
 # Cargar los datos
