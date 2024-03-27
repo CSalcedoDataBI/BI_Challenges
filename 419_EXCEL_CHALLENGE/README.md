@@ -22,7 +22,7 @@ Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamie
 ![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/5753259fc5fc8b86223c736ce1d6643d8aba15f3/419_EXCEL_CHALLENGE/Files/419_EXCEL_CHALLENGE_PySpark.png)
 
 Copiar Codigo aquí:
-```
+```python
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf, col
 from pyspark.sql.types import IntegerType, BooleanType
