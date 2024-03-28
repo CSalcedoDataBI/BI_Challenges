@@ -1,17 +1,23 @@
-# 419_EXCEL_CHALLENGE
+# 422_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 419 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 422 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
 El desafío requiere:
-Invertir un número. Si este nuevo número es perfectamente divisible por el número original y ambos números no son números palíndromos, entonces enumere ese número. (Estamos excluyendo los números de palíndromo, ya que el número invertido es igual al número original)
-Enumere los primeros 12 números de este tipo. Los dígitos mínimos deben ser 2.
-Ejemplo: 2178. El número invertido es 8712. 8712 / 2178 = 4 y estos dos números no son números de palíndromo.
+Revised Julian Calendar Leap Year Rules
+1. Year perfectly divisible by 4.
+2. Century years when divided by 900 leave the remainder of either 200 or 600.
+In Gregorian calendar, rule 1 is same but for century years, it has to be perfectly divisible by 400. 
+ 
+Find the Years between 1901 to 9999 where a year is leap year either in Gregorian or Revised Julian calendar but not in other. Hence, it should be a leap year in one system but not in both. Hence, both systems disagree for these years from leap year perspective.
+
+Ex. 2800 - This is a leap year in Gregorian calendar as perfectly divisible by 400 but when divided by 900, it leaves a remainder of 100, hence not a leap year in Revised Julian calendar.
+2900 - When divided by 900, it leaves a remainder of 200, hence a leap year in Revised Julian Calendar. But it is not perfectly divisible by 400, hence not a leap year in Gregorian Calendar.
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7177876857915117569-cHiT?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7178964017565032448-lzFX?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
