@@ -15,7 +15,7 @@ Find the Years between 1901 to 9999 where a year is leap year either in Gregoria
 Ex. 2800 - This is a leap year in Gregorian calendar as perfectly divisible by 400 but when divided by 900, it leaves a remainder of 100, hence not a leap year in Revised Julian calendar.
 2900 - When divided by 900, it leaves a remainder of 200, hence a leap year in Revised Julian Calendar. But it is not perfectly divisible by 400, hence not a leap year in Gregorian Calendar.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/c9961e9a15f3befbee69580e10b67febac26e815/418_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4b14d020fa7fa47ed6492761c5a64f33bf4e2bfa/422_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7178964017565032448-lzFX?utm_source=share&utm_medium=member_desktop)
 
@@ -61,7 +61,7 @@ disagreement_years_df.select("year").show()
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/5753259fc5fc8b86223c736ce1d6643d8aba15f3/419_EXCEL_CHALLENGE/Files/419_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4b14d020fa7fa47ed6492761c5a64f33bf4e2bfa/422_EXCEL_CHALLENGE/Files/422_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
 ```python
