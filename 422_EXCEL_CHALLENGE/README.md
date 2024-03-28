@@ -25,7 +25,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/5753259fc5fc8b86223c736ce1d6643d8aba15f3/419_EXCEL_CHALLENGE/Files/419_EXCEL_CHALLENGE_PySpark.png)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/21cbfa99f030970c2a53fbf79d40369000e0db89/422_EXCEL_CHALLENGE/Files/422_EXCEL_CHALLENGE_PySpark.png)
 
 Copiar Codigo aquí:
 ```python
