@@ -22,31 +22,44 @@ Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamie
 
 Copiar Codigo aquí:
 ```python
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import expr
+from pyspark.sql import SparkSession 
+from pyspark.sql.functions import udf
+from pyspark.sql.types import ArrayType, StringType
+import re
+import pandas as pd
 
-# Iniciar SparkSession (asumiendo que ya está iniciado y asignado a la variable `spark`)
-spark = SparkSession.builder.appName("EXCELBICHALLLENGE422").getOrCreate()
+# Initialize Spark session
+spark = SparkSession.builder.appName("Challenge423").getOrCreate()
 
-# Crear un DataFrame con el rango de años
-years_df = spark.range(1901, 10000).toDF("year")
-
-# Definir las reglas de años bisiestos para ambos calendarios como columnas calculadas
-years_df = years_df.withColumn(
-    "is_gregorian_leap",
-    expr("((year % 4 = 0) AND (year % 100 != 0)) OR (year % 400 = 0)")
-).withColumn(
-    "is_revised_julian_leap",
-    expr("((year % 4 = 0) AND (year % 100 != 0)) OR (year % 900 = 200) OR (year % 900 = 600)")
+# Regular expression to match transitions between lower and uppercase letters, and between letters and digits
+transition_regex = (
+    r'(?<=[a-z])(?=[A-Z])|'  # Lowercase to uppercase
+    r'(?<=[A-Z])(?=[a-z])|'  # Uppercase to lowercase
+    r'(?<=[A-Za-z])(?=\d)|'  # Letters to digits
+    r'(?<=\d)(?=[A-Za-z])'   # Digits to letters
 )
 
-# Filtrar los años donde los calendarios no están de acuerdo en si es un año bisiesto
-disagreement_years_df = years_df.filter(
-    "is_gregorian_leap != is_revised_julian_leap"
-)
+# Path to the input Excel file
+excel_file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_423 - Split Case Sensitive Alphabets and Numbers.xlsx"
 
-# Mostrar los resultados
-disagreement_years_df.select("year").show()
+# Load the Excel file into a Pandas DataFrame
+pandas_dataframe = pd.read_excel(excel_file_path, usecols=[0])
+
+# Convert the Pandas DataFrame to a Spark DataFrame
+spark_dataframe = spark.createDataFrame(pandas_dataframe)
+
+# Function to split strings based on the defined transitions
+def split_string_on_transition(input_string):
+    return re.split(transition_regex, input_string)
+
+# Register the function as a Spark UDF
+split_on_transition_udf = udf(split_string_on_transition, ArrayType(StringType()))
+
+# Apply the UDF to the Spark DataFrame to create a new column with the expected answer
+result_dataframe = spark_dataframe.select("Data", split_on_transition_udf("Data").alias("ExpectedAnswer"))
+
+# Display the results without truncating the output
+result_dataframe.show(truncate=False)
 
 ```
 
@@ -58,30 +71,32 @@ Aquí está mi solución implementada en Python puro, aprovechando las bibliotec
 
 Copiar Codigo aquí:
 ```python
-# Re-defining the functions to check leap years for both the Gregorian and Revised Julian calendars
+import pandas as pd
+import re
 
-def is_leap_gregorian(year):
-    # Leap year rule for Gregorian calendar
-    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+# Path to the Excel file
+excel_file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_423 - Split Case Sensitive Alphabets and Numbers.xlsx"
 
-def is_leap_revised_julian(year):
-    # Leap year rule for Revised Julian calendar
-    return year % 4 == 0 and (year % 100 != 0 or year % 900 == 200 or year % 900 == 600)
+# Load the Excel file into a Pandas DataFrame
+pandas_dataframe = pd.read_excel(excel_file_path, usecols=[0])
 
-# Initialize an empty list to store years where the leap year status disagrees
-disagreement_years_list = []
+# Regular expression to identify transitions
+transition_regex = (
+    r'(?<=[a-z])(?=[A-Z])|'  # Lowercase to uppercase
+    r'(?<=[A-Z])(?=[a-z])|'  # Uppercase to lowercase
+    r'(?<=[A-Za-z])(?=\d)|'  # Letters to digits
+    r'(?<=\d)(?=[A-Za-z])'   # Digits to letters
+)
 
-# Iterate over each year in the range
-for year in range(1901, 10000):
-    # Check leap year status for both calendars
-    gregorian = is_leap_gregorian(year)
-    revised_julian = is_leap_revised_julian(year)
-    
-    # If the leap year status disagrees, add the year to the list
-    if gregorian != revised_julian:
-        disagreement_years_list.append(year)
+# Function to split strings based on defined transitions
+def split_string_on_transition(input_string):
+    return re.split(transition_regex, input_string)
 
-disagreement_years_list
+# Apply the function to the DataFrame
+pandas_dataframe['ExpectedAnswer'] = pandas_dataframe['Data'].apply(split_string_on_transition)
+
+# Display the DataFrame
+print(pandas_dataframe)
 
 ```
 ## ¿Cómo utilizar este repositorio?
