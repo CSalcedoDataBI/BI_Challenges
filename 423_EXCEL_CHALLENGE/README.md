@@ -8,7 +8,7 @@ El desafío requiere:
 Divida las cadenas dadas cada vez que se produzca un cambio entre el alfabeto inglés y los números. Este es un problema que distingue entre mayúsculas y minúsculas. Por lo tanto, la división ocurrirá si el cambio es par para el caso.
 Ej. dBaw46c8 - d, B, aw, 46, c, 8
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4b14d020fa7fa47ed6492761c5a64f33bf4e2bfa/423_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/80c4648637d0a83a29a496cdfa8256e267417033/423_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7179326423331921920-tw8v?utm_source=share&utm_medium=member_desktop)
 
@@ -18,7 +18,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/21cbfa99f030970c2a53fbf79d40369000e0db89/423_EXCEL_CHALLENGE/Files/423_EXCEL_CHALLENGE_PySpark.png)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/80c4648637d0a83a29a496cdfa8256e267417033/423_EXCEL_CHALLENGE/Files/423_EXCEL_CHALLENGE_PySpark.png)
 
 Copiar Codigo aquí:
 ```python
@@ -54,7 +54,7 @@ disagreement_years_df.select("year").show()
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4b14d020fa7fa47ed6492761c5a64f33bf4e2bfa/423_EXCEL_CHALLENGE/Files/423_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/80c4648637d0a83a29a496cdfa8256e267417033/423_EXCEL_CHALLENGE/Files/423_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
 ```python
