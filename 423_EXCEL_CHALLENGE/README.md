@@ -99,6 +99,107 @@ pandas_dataframe['ExpectedAnswer'] = pandas_dataframe['Data'].apply(split_string
 print(pandas_dataframe)
 
 ```
+## Otras Soluciones
+
+### Solución en Power Query presentada por Aditya Kumar Darak
+
+Me gustaría destacar una solución alternativa presentada por Aditya Kumar Darak, que utiliza Power Query en Excel para abordar el desafío.
+
+Para más detalles sobre esta solución, puedes visitar la discusión original en LinkedIn aquí: [Ver Solución de Aditya Kumar Darak](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179332333995450368%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179332333995450368%2Curn%3Ali%3Aactivity%3A7179326423331921920%29).
+
+### Implementación de la Solución en Power Query 1🛠️
+```powerquery
+let
+  Source = Excel.CurrentWorkbook(){[Name = "Data"]}[Content], 
+  Series = {{"A" .. "Z"}, {"a" .. "z"}, {"0" .. "9"}}, 
+  Result = Table.AddColumn(
+    Source, 
+    "Answer", 
+    each [
+      a = (x, y, z) => Text.Combine(Splitter.SplitTextByCharacterTransition(x, y)(z), ", "), 
+      b = a(Series{0}, Series{1} & Series{2}, [Data]), 
+      c = a(Series{1}, Series{0} & Series{2}, b), 
+      d = a(Series{2}, Series{0} & Series{1}, c)
+    ][d]
+  )
+in
+  Result
+```
+### Solución en Power Query presentada por Luan Rodrigues
+Para más detalles sobre esta solución, puedes visitar la discusión original en LinkedIn aquí: [Ver Solución de Luan Rodrigues](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179570378703310848%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179570378703310848%2Curn%3Ali%3Aactivity%3A7179326423331921920%29).
+
+### Implementación de la Solución en Power Query 2 🛠️
+```powerquery
+let
+  Fonte = Excel.CurrentWorkbook(){[Name="Data"]}[Content], 
+  res = Table.AddColumn(
+    Fonte, 
+    "Personalizar", 
+    each Text.Combine(
+      List.Combine(
+        List.TransformMany(
+          {{"0" .. "9"}, {"A" .. "z"}}, 
+          (x) =>
+            let
+              a = Text.Split(
+                Text.Combine(List.Transform(Text.ToList([Data]), each Text.Select(_, x)), ", "), 
+                ", , "
+              ), 
+              b = List.Transform(a, each Text.Remove(_, {",", " "})), 
+              c = List.Select(b, each _ <> "")
+            in
+              c, 
+          (x, y) =>
+            List.TransformMany(
+              Splitter.SplitTextByCharacterTransition({"A" .. "Z"}, {"a" .. "z"})(y), 
+              (a) => Splitter.SplitTextByCharacterTransition({"a" .. "z"}, {"A" .. "Z"})(a), 
+              (o, p) => p
+            )
+        )
+      ), 
+      ", "
+    )
+  )
+in
+    res
+```
+### Solución en Power Query presentada por Luan Rodrigues
+Para más detalles sobre esta solución, puedes visitar la discusión original en LinkedIn aquí: [Ver Solución de Venkata Rajesh](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179420495744827393%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179420495744827393%2Curn%3Ali%3Aactivity%3A7179326423331921920%29).
+
+### Implementación de la Solución en Power Query 3 🛠️
+```powerquery
+let
+  Source = Excel.CurrentWorkbook(){[Name="Data"]}[Content], 
+  Output = Table.AddColumn(
+    Source, 
+    "Expected", 
+    each [
+      x = Text.ToList([Data]), 
+      y = (x as text) =>
+        if List.Contains({"0" .. "9"}, x) then
+          "number"
+        else if List.Contains({"a" .. "z"}, x) then
+          "lower"
+        else
+          "upper", 
+      z = List.Accumulate(
+        {0 .. List.Count(x) - 2}, 
+        "", 
+        (state, current) =>
+          if y(x{current}) = y(x{current + 1}) then
+            state & x{current}
+          else
+            state & x{current} & " ,"
+      )
+        & List.Last(x)
+    ][z]
+  )
+in
+    Output
+```
+## Agradecimientos y Referencias
+Me gustaría agradecer a Aditya Kumar Darak, Luan Rodrigues y Venkata Rajesh por compartir esta ingeniosa solución de Power Query en LinkedIn. Su contribución proporciona una perspectiva valiosa y un método alternativo para abordar el desafío.
+
 ## ¿Cómo utilizar este repositorio?
 
 Puede clonar este repositorio y ejecutar los notebooks proporcionados para ver cómo se implementaron las soluciones. Se proporcionan instrucciones detalladas dentro de cada notebook.
