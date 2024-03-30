@@ -198,7 +198,7 @@ in
     Output
 ```
 ## Agradecimientos y Referencias
-Me gustaría agradecer a Aditya Kumar Darak, Luan Rodrigues y Venkata Rajesh por compartir esta ingeniosa solución de Power Query en LinkedIn. Su contribución proporciona una perspectiva valiosa y un método alternativo para abordar el desafío.
+Me gustaría agradecer a [Aditya Kumar Darak](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179332333995450368%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179332333995450368%2Curn%3Ali%3Aactivity%3A7179326423331921920%29), [Luan Rodrigues](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179570378703310848%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179570378703310848%2Curn%3Ali%3Aactivity%3A7179326423331921920%29) y [Venkata Rajesh](https://www.linkedin.com/feed/update/urn:li:activity:7179326423331921920?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7179326423331921920%2C7179420495744827393%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287179420495744827393%2Curn%3Ali%3Aactivity%3A7179326423331921920%29) por compartir esta ingeniosa solución de Power Query en LinkedIn. Su contribución proporciona una perspectiva valiosa y un método alternativo para abordar el desafío.
 
 Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/in/excelbi/) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
 
