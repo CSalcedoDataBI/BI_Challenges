@@ -200,6 +200,8 @@ in
 ## Agradecimientos y Referencias
 Me gustaría agradecer a Aditya Kumar Darak, Luan Rodrigues y Venkata Rajesh por compartir esta ingeniosa solución de Power Query en LinkedIn. Su contribución proporciona una perspectiva valiosa y un método alternativo para abordar el desafío.
 
+Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/in/excelbi/) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
+
 ## ¿Cómo utilizar este repositorio?
 
 Puede clonar este repositorio y ejecutar los notebooks proporcionados para ver cómo se implementaron las soluciones. Se proporcionan instrucciones detalladas dentro de cada notebook.
