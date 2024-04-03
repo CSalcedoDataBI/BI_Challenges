@@ -13,7 +13,7 @@ Ej. 2905
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/a3009c9b15d2c8c8d28ba065d8c286b4167a2e5a/424_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post]https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7180413652410261504-RU-0?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7180413652410261504-RU-0?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
