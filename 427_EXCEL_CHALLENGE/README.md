@@ -20,7 +20,7 @@ Paso 5. La respuesta sería hcosa
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/e2c941df816763045366df0658358ab82f4168ea/427_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7180413652410261504-RU-0?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7181500742896115712-C75i?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
