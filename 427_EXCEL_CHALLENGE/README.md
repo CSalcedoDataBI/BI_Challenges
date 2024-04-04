@@ -1,26 +1,19 @@
-# 427_EXCEL_CHALLENGE
+# 424_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 427 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 424 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
 El desafío requiere:
-Doble acumulación de cifrado
-Paso 1. Tome una cadena y reemplace sus alfabetos con a = 0 ... z = 25 en una matriz. 
-Paso 2. Realice la suma acumulativa de los elementos respectivos de la matriz donde un elemento es igual a este elemento + suma de los elementos anteriores.
-Paso 3. Tome el módulo 26 de los elementos de la matriz.
-Paso 4. Aplique los pasos 2 y 3 en la matriz resultante de los pasos 3.
-Paso 5. Convierta la matriz en alfabetos respectivos donde 0 = a.... 25=z
-Ej. caballo
-Paso 1. (7, 14, 17, 18, 4)
-Paso 2. (7, 21, 38, 56, 60)
-Paso 3. (7, 21, 12, 4, 8)
-Paso 4. (7, 28, 40, 44, 52) => aplicar módulo 26 = > (7, 2, 14, 18, 0) 
-Paso 5. La respuesta sería hcosa
+Toma los dígitos i-ésimos y (i+1), multiplícalos e inserta el resultado entre los mismos dígitos.
+Ej. 2905
+2*9 = 18 => 2189 
+9*0 = 0 => 218900
+0*5 = 0 => 21890005
 
 ![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/a3009c9b15d2c8c8d28ba065d8c286b4167a2e5a/424_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7181500742896115712-C75i?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7180413652410261504-RU-0?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
