@@ -22,7 +22,7 @@ C = (12 - (327 mod 11)) mod 11 = 4
 
 Enumere los números de identificación nacional chinos válidos de la lista dada.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/e2c941df816763045366df0658358ab82f4168ea/427_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7181863144409939969-Wviw?utm_source=share&utm_medium=member_desktop)
 
@@ -32,7 +32,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/e2c941df816763045366df0658358ab82f4168ea/427_EXCEL_CHALLENGE/Files/427_EXCEL_CHALLENGE_PySpark.png)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_PySpark.png)
 
 Copiar Codigo aquí:
 
@@ -80,7 +80,7 @@ filtered_data.show()
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/e2c941df816763045366df0658358ab82f4168ea/427_EXCEL_CHALLENGE/Files/427_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
 
