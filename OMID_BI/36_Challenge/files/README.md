@@ -20,20 +20,28 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/3304ad4a782789036b8365c58ed166fbecd40a92/OMID_BI/36_Challenge/files/36_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
 
 ```python
 import pandas as pd
+
 path_file = "/lakehouse/default/Files/ChallengeOmid/CH-036 Pareto Line.xlsx"
 
 pandas_df = pd.read_excel(path_file, header=1, usecols=[1, 2, 3, 4])
-result = pandas_df.apply(lambda row: not any((pandas_df.iloc[:, 1:4] > row[1:4]).all(axis=1)), axis=1)
-result = pandas_df.apply(lambda row: not any((pandas_df.iloc[:, 1:4] > row[1:4]).all(axis=1)), axis=1)
-result = result[result].index.to_frame(index=False).rename(columns={0:"Solution ID"})+1
+result = pandas_df.apply(
+    lambda row: not any((pandas_df.iloc[:, 1:4] > row[1:4]).all(axis=1)), axis=1
+)
+result = pandas_df.apply(
+    lambda row: not any((pandas_df.iloc[:, 1:4] > row[1:4]).all(axis=1)), axis=1
+)
+result = (
+    result[result].index.to_frame(index=False).rename(columns={0: "Solution ID"}) + 1
+)
 result["Solution ID"] = result["Solution ID"].astype(int)
 print(result)
+
 
 ```
 
