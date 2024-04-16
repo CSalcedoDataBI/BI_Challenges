@@ -10,9 +10,9 @@ Descubramos un método ingenioso para abordar el reto 36: En los modelos multiob
 Una solución, digamos 'a', se considera no dominante si no hay otra solución, como 'b', donde todos los valores objetivos de 'b' son mayores que los de 'a'.
 Por ejemplo, el identificador de solución 1, dominado por los identificadores de solución 7, 8, 9 y 11, se excluye de la tabla de resultados.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/6a18a1209d84d96b7c7a63d0a7ed346a3a3ceb50/OMID_BI/36_Challenge/files/Challenge.png)
 
-La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/omid-motamedisedeh-74aba166_excelchallenge-powerquerychllenge-excel-activity-7184656532284882944-UuQm?utm_source=share&utm_medium=member_desktop)
+La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel LinkedIn Post](https://www.linkedin.com/posts/omid-motamedisedeh-74aba166_excelchallenge-powerquerychllenge-excel-activity-7184656532284882944-UuQm?utm_source=share&utm_medium=member_desktop)
 
 ## Soluciones
 
