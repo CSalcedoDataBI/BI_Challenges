@@ -14,11 +14,6 @@ Cada subcarpeta está nombrada según el desafío de Excel correspondiente y con
 - Notebooks de Jupyter o scripts de Python/PySpark que contienen el código utilizado.
 - Archivos de Power Query con soluciones utilizando el lenguaje M.
 
-## Soluciones Destacadas
-
-- **416_EXCEL_CHALLENGE**: Una exploración detallada de la generación de secuencias numéricas basadas en strings, resuelto con PySpark y Python.
-- **410_EXCEL_CHALLENGE**: Optimización de consultas de datos usando Power Query (Lenguaje M).
-
 ## Herramientas Utilizadas
 
 - **Excel y Power Query**: Para el procesamiento y análisis de datos estructurados.
@@ -46,7 +41,7 @@ Este proyecto está bajo la [Licencia MIT](LICENSE). Siente la libertad de usarl
 
 ## Agradecimientos
 
-Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/in/excelbi/) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
+Un agradecimiento especial a la comunidad de [Omid Motamedisedeh](https://www.linkedin.com/posts/omid-motamedisedeh-74aba166_excelchallenge-powerquerychllenge-excel-activity-7184656532284882944-UuQm?utm_source=share&utm_medium=member_desktop) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
 
 ---
 
