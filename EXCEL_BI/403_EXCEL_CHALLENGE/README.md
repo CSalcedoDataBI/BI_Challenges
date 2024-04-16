@@ -9,7 +9,7 @@ Genere la suma del valor y el % del valor para los tramos de años de 5 años ca
 
 (No es necesario que su fórmula sea una sola fórmula. Puede escribir varias fórmulas para llegar a una solución. Además, su fórmula no tiene por qué ser diferente de las demás, siempre y cuando haya elaborado su fórmula de forma independiente)
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4a110c7ca86b8757e730e703e0c9e1d8f6e6b4dc/EXCEL_BI/403_EXCEL_CHALLENGE/files/Excel_BI.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7169179556946329600-4n_0?utm_source=share&utm_medium=member_desktop)
 
@@ -19,91 +19,60 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_PySpark.png)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4a110c7ca86b8757e730e703e0c9e1d8f6e6b4dc/EXCEL_BI/403_EXCEL_CHALLENGE/files/403_EXCEL_CHALLENGE.PNG)
 
 Copiar Codigo aquí:
 
 ```python
+# https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7169179556946329600-4n_0/
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, udf
-from pyspark.sql.types import BooleanType
-from datetime import datetime
-spark = SparkSession.builder.appName("CHALLENGE428").getOrCreate()
-file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_428 - Chinese National ID.xlsx"
-pandas_df = pd.read_excel(file_path, usecols=[0], nrows=10)
-spark_df = spark.createDataFrame(pandas_df)
-general_pattern = "\\d{6}\\d{8}\\d{3}[0-9X]"
-def is_valid_date(ID):
-    date_str = ID[6:14]
-    try:
-        datetime.strptime(date_str, "%Y%m%d")
-        return True
-    except ValueError:
-        return False
-def is_ID_valid(ID):
-    base = [int(digit) for digit in ID[:17]]
-    I = list(range(18, 1, -1))
-    WI = [2**(i-1) % 11 for i in I]
-    S = sum(digit * weight for digit, weight in zip(base, WI))
-    C = (12 - (S % 11)) % 11
-    C = 'X' if C == 10 else str(C)
-
-    whole_id = ''.join(map(str, base)) + C
-    return whole_id == ID
-is_valid_date_udf = udf(is_valid_date, BooleanType())
-is_ID_valid_udf = udf(is_ID_valid, BooleanType())
-filtered_data = spark_df.filter(col("National ID").rlike(general_pattern)) \
-                        .withColumn("Is Valid Date", is_valid_date_udf(col("National ID"))) \
-                        .withColumn("Is ID Valid", is_ID_valid_udf(col("National ID"))) \
-                        .filter(col("Is Valid Date") & col("Is ID Valid")) \
-                        .drop("Is Valid Date", "Is ID Valid") \
-                        .withColumnRenamed("National ID", "My Solution")
-filtered_data.show()
-
-
-```
-
-### Solución usando Python en un Notebook en MicrosoftFabric
-
-Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
-
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_Python.png)
-
-Copiar Codigo aquí:
-
-```python
+from pyspark.sql.functions import col, concat, lit, sum as _sum, round, asc
 import pandas as pd
-from datetime import datetime
 
-file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_428 - Chinese National ID.xlsx"
-pandas_df = pd.read_excel(file_path, usecols=[0], nrows=10)
+# Path to the Excel file
+file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_403 - Generate Pivot Table.xlsx"
+sheet_name = "Sheet1"
+# Read data from Excel with Pandas
+df_pandas = pd.read_excel(file_path, sheet_name=sheet_name, usecols="A:B", nrows=100)
 
-general_pattern = "\\d{6}\\d{8}\\d{3}[0-9X]"
+# Start SparkSession
+spark = SparkSession.builder.appName("GroupByInterval").getOrCreate()
 
-def is_valid_date(ID):
-    date_str = ID[6:14]
-    try:
-        datetime.strptime(date_str, "%Y%m%d")
-        return True
-    except ValueError:
-        return False
+# Convert to PySpark DataFrame
+df_spark = spark.createDataFrame(df_pandas)
 
-def is_ID_valid(ID):
-    base = [int(digit) for digit in ID[:17]]
-    I = list(range(18, 1, -1))
-    WI = [2**(i-1) % 11 for i in I]
-    S = sum(digit * weight for digit, weight in zip(base, WI))
-    C = (12 - (S % 11)) % 11
-    C = 'X' if C == 10 else str(C)
+# Display the original DataFrame (optional)
+df_spark.show(3)
 
-    whole_id = ''.join(map(str, base)) + C
-    return whole_id == ID
-filtered_data = pandas_df[pandas_df['National ID'].str.match(general_pattern).fillna(False)].copy()
-filtered_data['My Solution'] = filtered_data['National ID'].apply(lambda x: x if is_valid_date(x) and is_ID_valid(x) else pd.NA)
+# Base year for the group calculation
+base_year = 1990
 
-filtered_data.drop(columns=['National ID'], inplace=True)
-filtered_data = filtered_data.dropna(subset=['My Solution'])
-print(filtered_data)
+# Group by 5-year intervals
+df_grouped = df_spark.withColumn("YearGroup", ((col("Year") - base_year) / 5).cast("int") * 5 + base_year) \
+    .groupBy("YearGroup") \
+    .agg(_sum("Value").alias("Sum of Value"))
+
+# Calculate the total of all values for later percentage calculation
+total_value = df_grouped.agg(_sum("Sum of Value").alias("total")).first()["total"]
+
+# Calculate the percentage for each group and convert to integer
+df_grouped = df_grouped.withColumn("% of Value", 
+                                   round((col("Sum of Value") / total_value) * 100).cast("int"))
+
+# Add the year interval labels
+df_grouped = df_grouped.withColumn("Year", concat(col("YearGroup"), lit("-"), col("YearGroup") + 4)) \
+    .selectExpr("Year", "`Sum of Value`", "`% of Value` || '%' as `% of Value`")
+
+# Ensure the year groups are sorted
+df_grouped = df_grouped.orderBy(asc("YearGroup"))
+
+# Add the grand total at the end
+df_grand_total = spark.createDataFrame([("Grand Total", total_value, "100%")], ["Year", "Sum of Value", "% of Value"])
+df_final = df_grouped.unionByName(df_grand_total)
+
+# Display the final result
+df_final.show()
+
 
 ```
 
