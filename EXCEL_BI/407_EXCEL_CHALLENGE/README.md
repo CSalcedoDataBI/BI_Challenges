@@ -10,7 +10,7 @@ Palabras inversas - Bomba difusa
 Alfabetos inversos - Desuffid BMoB
 Aplicar desplazamiento de 5 - ijxzkkni grtg
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f938e0bb67175a39b0e61a60fb4707671a653466/EXCEL_BI/407_EXCEL_CHALLENGE/files/Excel_BI.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7181863144409939969-Wviw?utm_source=share&utm_medium=member_desktop)
 
@@ -20,7 +20,7 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_PySpark.png)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f938e0bb67175a39b0e61a60fb4707671a653466/EXCEL_BI/407_EXCEL_CHALLENGE/files/EXCEL_CHALLENGE_407_PySpark.PNG)
 
 Copiar Codigo aquí:
 
@@ -56,7 +56,7 @@ display(df_result)
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f938e0bb67175a39b0e61a60fb4707671a653466/EXCEL_BI/407_EXCEL_CHALLENGE/files/EXCEL_CHALLENGE_407_Python.PNG)
 
 Copiar Codigo aquí:
 
