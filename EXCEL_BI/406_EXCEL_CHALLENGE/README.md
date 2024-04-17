@@ -17,92 +17,73 @@ La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [
 
 ## Soluciones
 
-### Solución usando PySpark 🚀 en un Notebook en MicrosoftFabric
+### Solución de Alejandro Simón usando Power Query 
 
-Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f938e0bb67175a39b0e61a60fb4707671a653466/EXCEL_BI/407_EXCEL_CHALLENGE/files/EXCEL_CHALLENGE_407_PySpark.PNG)
+![Solución Powuer Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/34526883598d9d8e0b6e4bf600681e037ddcf64e/EXCEL_BI/406_EXCEL_CHALLENGE/files/SolutionAlejandro_Sim%C3%B3n.png)
 
 Copiar Codigo aquí:
 
-```python
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import udf, col
-from pyspark.sql.types import StringType
-import pandas as pd
-spark = SparkSession.builder.appName("Excel to Spark DF").getOrCreate()
-file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_407 - Mirror Cipher.xlsx"
-
-pandas_df = pd.read_excel(file_path, usecols="A:B")
-spark_df = spark.createDataFrame(pandas_df)
-
-def mirror_cipher_caesar_shift(plaintext, shift):
-    words_reversed = plaintext.split()[::-1]
-    mirrored_sentence = ' '.join(word[::-1] for word in words_reversed)
-    encrypted_sentence = ''.join(
-        chr(((ord(char) - 65 + shift) % 26) + 65) if char.isupper() else
-        chr(((ord(char) - 97 + shift) % 26) + 97) if char.islower() else char
-        for char in mirrored_sentence
-    )
-    return encrypted_sentence
-    
-encrypt_udf = udf(mirror_cipher_caesar_shift, StringType())
-df_result = spark_df.withColumn("Answer Expected", encrypt_udf(col("Plain Text"), col("Shift")))
-display(df_result)
+```pq
+let
+  Source = Excel.CurrentWorkbook(){[Name = "Table1"]}[Content],
+  Sol = Table.Combine(
+    Table.AddColumn(
+      Source,
+      "A",
+      (w) =>
+        let
+          a = List.Skip(
+            List.Generate(
+              () => [x = w[Hypotenuse], y = 1],
+              each [x] > 0,
+              each [x = [x] - 1, y = Number.Sqrt(Number.Power(w[Hypotenuse], 2) - x * x)],
+              each [y]
+            )
+          ),
+          b = List.Select(a, each Int64.From(_) = _),
+          c = Table.FromRows({{List.Min(b), List.Max(b)}}, {"Base", "Perpendicular"})
+        in
+          c
+    )[A]
+  )
+in
+  Sol
 
 
 ```
 
-### Solución usando Python en un Notebook en MicrosoftFabric
+### Solución de Ramiro Ayala Chávez
 
-Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/f938e0bb67175a39b0e61a60fb4707671a653466/EXCEL_BI/407_EXCEL_CHALLENGE/files/EXCEL_CHALLENGE_407_Python.PNG)
+
+![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/34526883598d9d8e0b6e4bf600681e037ddcf64e/EXCEL_BI/406_EXCEL_CHALLENGE/files/SolutionRamiro_Ayala_Ch%C3%A1vez.png)
 
 Copiar Codigo aquí:
 
-```python
-import pandas as pd
-
-# Path to the Excel file to be read
-file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_407 - Mirror Cipher.xlsx"
-
-# Load the Excel file into a Pandas DataFrame, using only columns "A" and "B"
-df = pd.read_excel(file_path, usecols="A:B")
-
-# Definition of the encryption function
-def mirror_cipher_caesar_shift(plaintext, shift):
-    """
-    This function applies a mirror cipher followed by a Caesar cipher.
-    
-    - First, it reverses the order of the words and then reverses the letters within each word.
-    - Then it applies a Caesar shift with the given value.
-    
-    Parameters:
-    - plaintext: The original text to be encrypted.
-    - shift: Shift value for the Caesar cipher.
-    
-    Returns:
-    - Encrypted text applying the mirror cipher first and then the Caesar cipher.
-    """
-    # Reverse the order of the words
-    words_reversed = plaintext.split()[::-1]
-    # Reverse the letters within each word
-    mirrored_sentence = ' '.join(word[::-1] for word in words_reversed)
-    # Apply the Caesar cipher
-    encrypted_sentence = ''.join(
-        chr(((ord(char) - 65 + shift) % 26) + 65) if char.isupper() else
-        chr(((ord(char) - 97 + shift) % 26) + 97) if char.islower() else char
-        for char in mirrored_sentence
-    )
-    return encrypted_sentence
-
-# Apply the encryption function to each row of the DataFrame
-df['Encrypted'] = df.apply(lambda row: mirror_cipher_caesar_shift(row['Plain Text'], row['Shift']), axis=1)
-
-# Display the DataFrame with the results
-print(df)
-
+```pq
+let
+  S = Excel.CurrentWorkbook(){[Name = "Table1"]}[Content],
+  Fx = (A, h) =>
+    let
+      A = A,
+      h = h,
+      a = 2 * A,
+      b = Number.Power(h * h + 4 * A, 1 / 2),
+      c = {1 .. 500},
+      d = List.Generate(
+        () => [i = 0, j = 1],
+        each [i] < List.Count(c),
+        each if [j] = List.Count(c) then [i = [i] + 1, j = [i] + 2] else [i = [i], j = [j] + 1],
+        each {c{[i]}} & {c{[j] - 1}}
+      ),
+      e = List.Select(d, each _{0} + _{1} = b and _{0} * _{1} = a){0}
+    in
+      e,
+  f = Table.AddColumn(S, "Base", each Fx([Area], [Hypotenuse]){0}),
+  Sol = Table.AddColumn(f, "Perpendicular", each Fx([Area], [Hypotenuse]){1})
+in
+  Sol
 ```
 
 ## Agradecimientos y Referencias
