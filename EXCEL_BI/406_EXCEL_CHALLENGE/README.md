@@ -89,6 +89,8 @@ in
 ## Agradecimientos y Referencias
 Me gustaría agradecer a [Alejandro Simón](https://www.linkedin.com/feed/update/urn:li:activity:7170991492973355008?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7170991492973355008%2C7171012036280201216%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287171012036280201216%2Curn%3Ali%3Aactivity%3A7170991492973355008%29), [Ramiro Ayala Chávez](https://www.linkedin.com/feed/update/urn:li:activity:7170991492973355008?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7170991492973355008%2C7171139106347888640%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287171139106347888640%2Curn%3Ali%3Aactivity%3A7170991492973355008%29) por compartir esta ingeniosa solución de Power Query en LinkedIn. Su contribución proporciona una perspectiva valiosa y un método alternativo para abordar el desafío.
 
+Un agradecimiento especial a la comunidad de [Excel BI](https://www.linkedin.com/in/excelbi/) por proporcionar estos desafiantes y enriquecedores problemas que nos permiten crecer profesionalmente en el campo del BI.
+
 ## ¿Cómo utilizar este repositorio?
 
 Puede clonar este repositorio y ejecutar los notebooks proporcionados para ver cómo se implementaron las soluciones. Se proporcionan instrucciones detalladas dentro de cada notebook.
