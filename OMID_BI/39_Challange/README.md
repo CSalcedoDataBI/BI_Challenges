@@ -64,7 +64,7 @@ print(result_df)
 
 Aquí está mi solución implementada en Power Query.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/0a2c380e0018358caae34ba18803c31a67990a05/OMID_BI/39_Challange/Files/Python.png)
+![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/9ed693393f32c097d5445725480cf6e356f9111b/OMID_BI/39_Challange/Files/PowerQuery.PNG)
 
 ´´´pq
 let
