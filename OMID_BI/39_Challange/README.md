@@ -99,7 +99,7 @@ Aquí está mi solución implementada en Power Query.
 
 ![Solución Power Query](https://github.com/cristobalsalcedo90/BI_Challenges/blob/9ed693393f32c097d5445725480cf6e356f9111b/OMID_BI/39_Challange/Files/PowerQuery.PNG)
 
-´´´pq
+```pq
 let
   Source = Excel.CurrentWorkbook(){[Name = "Table2"]}[Content], 
   #"Unpivoted Other Columns" = Table.FromList(
@@ -110,7 +110,7 @@ let
 in
   #"Unpivoted Other Columns"
 
-´´´
+```
 
 ## Agradecimientos y Referencias
 
