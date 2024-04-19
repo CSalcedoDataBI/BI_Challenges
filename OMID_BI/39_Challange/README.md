@@ -8,7 +8,7 @@ El desafío requiere:
 Descubramos un método ingenioso para abordar el desafío 39: ¡Transformación!
 De la lista de productos de la tabla de preguntas, extraiga la lista única de todos los códigos de producto.
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/6a18a1209d84d96b7c7a63d0a7ed346a3a3ceb50/OMID_BI/36_Challenge/files/Challenge.png)
+![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/0a2c380e0018358caae34ba18803c31a67990a05/OMID_BI/39_Challange/Files/Omid.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Omid Motamedisedeh: [
 Omid Motamedisedeh](https://www.linkedin.com/posts/omid-motamedisedeh-74aba166_excelchallenge-powerquerychllenge-excel-activity-7186830879980191745-kfBw?utm_source=share&utm_medium=member_desktop)
@@ -19,7 +19,7 @@ Omid Motamedisedeh](https://www.linkedin.com/posts/omid-motamedisedeh-74aba166_e
 
 Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
 
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/4a110c7ca86b8757e730e703e0c9e1d8f6e6b4dc/EXCEL_BI/403_EXCEL_CHALLENGE/files/403_EXCEL_CHALLENGE.PNG)
+![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/0a2c380e0018358caae34ba18803c31a67990a05/OMID_BI/39_Challange/Files/PySpark.PNG)
 
 Copiar Codigo aquí:
 
@@ -46,7 +46,7 @@ unique_values.show()
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/e2c941df816763045366df0658358ab82f4168ea/427_EXCEL_CHALLENGE/Files/427_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/0a2c380e0018358caae34ba18803c31a67990a05/OMID_BI/39_Challange/Files/Python.png)
 
 Copiar Codigo aquí:
 ```python
@@ -59,8 +59,25 @@ unique_values = pd.Series(df_melted['Result - Unique Code'].dropna() \
 result_df = pd.DataFrame({"Result - Unique Code": unique_values})
 print(result_df)
 ```
+### Solución usando Python en un Notebook en MicrosoftFabric
 
 
+Aquí está mi solución implementada en Power Query.
+
+![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/0a2c380e0018358caae34ba18803c31a67990a05/OMID_BI/39_Challange/Files/Python.png)
+
+´´´pq
+let
+  Source = Excel.CurrentWorkbook(){[Name = "Table2"]}[Content], 
+  #"Unpivoted Other Columns" = Table.FromList(
+    List.Sort(List.Distinct(Table.UnpivotOtherColumns(Source, {}, "Attribute", "Value")[Value])), 
+    null, 
+    {"Result - Unique Code"}
+  )
+in
+  #"Unpivoted Other Columns"
+
+´´´
 
 ## Agradecimientos y Referencias
 
