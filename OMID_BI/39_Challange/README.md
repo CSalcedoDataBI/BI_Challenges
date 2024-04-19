@@ -42,6 +42,26 @@ unique_values.show()
 
 
 ```
+## Detalles de las Funciones Usadas
+
+- **SparkSession**: Esta clase es un punto de entrada a las funcionalidades de Spark SQL. Permite la creación de DataFrames y la ejecución de operaciones SQL, facilitando el procesamiento distribuido de grandes volúmenes de datos. La configuración del entorno de Spark y el manejo de recursos también se gestionan a través de esta sesión.
+
+- **read_excel**: Función de Pandas utilizada para leer un archivo Excel. Permite especificar las columnas a importar y la cantidad de filas a leer, lo que es útil para limitar la carga de datos en memoria cuando se trabaja con archivos grandes o detallados. Al cargar los datos con Pandas, se aprovecha la facilidad de manipulación de datos de Pandas antes de pasar los datos a Spark.
+
+- **createDataFrame**: Este método de `SparkSession` convierte estructuras de datos compatibles, como DataFrames de Pandas, en DataFrames de Spark. Esta conversión es esencial para pasar de la manipulación de datos con Pandas al procesamiento escalable con Spark. Al utilizar este método, se pueden aprovechar las optimizaciones de Spark para el procesamiento distribuido de datos mientras se mantienen las transformaciones iniciales realizadas en Pandas.
+
+- **explode**: Una función de PySpark que se utiliza para transformar cada elemento de una lista en una fila separada, replicando los valores de las otras columnas en cada nueva fila. Esto es especialmente útil para desnormalizar columnas que contienen listas o múltiples valores empaquetados en una sola celda.
+
+- **array**: En PySpark, esta función crea una columna de tipo arreglo a partir de varias columnas del DataFrame. Se utiliza comúnmente en combinación con `explode` para desestructurar arrays y manejar datos a nivel de elemento.
+
+- **distinct**: Método utilizado en DataFrames de PySpark para eliminar filas duplicadas. Es fundamental para asegurar que los análisis o resultados finales no sean sesgados por datos repetidos.
+
+- **sort**: Este método ordena las filas del DataFrame según los valores de una o más columnas. En el contexto de este script, se usa para ordenar los valores únicos extraídos, permitiendo una presentación más organizada y comprensible de los datos.
+
+- **na.drop**: Método para eliminar filas que contienen valores NaN en el DataFrame. Esto ayuda a mantener la calidad de los datos, asegurando que las operaciones y análisis subsiguientes se realicen sobre datos completos y válidos.
+
+
+
 ### Solución usando Python en un Notebook en MicrosoftFabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
@@ -59,7 +79,20 @@ unique_values = pd.Series(df_melted['Result - Unique Code'].dropna() \
 result_df = pd.DataFrame({"Result - Unique Code": unique_values})
 print(result_df)
 ```
-### Solución usando Python en un Notebook en MicrosoftFabric
+# Extracción y Ordenamiento de Valores Únicos en Python
+
+Este script utiliza Python y Pandas para leer datos desde un archivo Excel, transformar estos datos de un formato ancho a uno largo, y extraer y ordenar valores únicos de ciertas columnas. El objetivo es simplificar la manipulación de datos y facilitar análisis posteriores o integraciones.
+
+## Cómo Funciona
+
+1. **Leer Datos**: El script comienza leyendo un archivo Excel especificado, seleccionando ciertas columnas y un número limitado de filas.
+2. **Transformar Datos**: Utiliza la función `melt` de Pandas para transformar el DataFrame de un formato ancho a uno más largo.
+3. **Extracción de Valores Únicos**: A partir de los datos transformados, se extraen valores únicos, excluyendo cualquier dato faltante (NaN).
+4. **Ordenamiento y Visualización**: Los valores únicos son ordenados y convertidos en un nuevo DataFrame para su fácil visualización.
+
+
+
+### Solución Power Query
 
 
 Aquí está mi solución implementada en Power Query.
