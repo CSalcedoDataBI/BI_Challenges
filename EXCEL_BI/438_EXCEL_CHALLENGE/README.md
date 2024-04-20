@@ -1,6 +1,6 @@
-# 428_EXCEL_CHALLENGE
+# 438_EXCEL_CHALLENGE
 
-Este repositorio contiene mis soluciones al 428 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
+Este repositorio contiene mis soluciones al 438 Excel Challenge, tal como se describe en el reto original proporcionado por Excel BI en su LinkedIn.
 
 ## Descripción del Desafío
 
@@ -28,61 +28,12 @@ Los valores deben expresarse en K (Kilo) / M (Mega) / G (Giga) Ohm o sin estos s
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7186936560318111744-ys1D?utm_source=share&utm_medium=member_desktop)
 
-## Soluciones
-
-### Solución usando PySpark 🚀 en un Notebook en MicrosoftFabric
-
-Aquí muestro cómo abordé el desafío usando PySpark, destacando el procesamiento distribuido para manejar datos a gran escala.
-
-![Solución PySpark](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_PySpark.png)
-
-Copiar Codigo aquí:
-
-```python
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, udf
-from pyspark.sql.types import BooleanType
-from datetime import datetime
-spark = SparkSession.builder.appName("CHALLENGE428").getOrCreate()
-file_path = "/lakehouse/default/Files/Challenge/Excel_Challenge_428 - Chinese National ID.xlsx"
-pandas_df = pd.read_excel(file_path, usecols=[0], nrows=10)
-spark_df = spark.createDataFrame(pandas_df)
-general_pattern = "\\d{6}\\d{8}\\d{3}[0-9X]"
-def is_valid_date(ID):
-    date_str = ID[6:14]
-    try:
-        datetime.strptime(date_str, "%Y%m%d")
-        return True
-    except ValueError:
-        return False
-def is_ID_valid(ID):
-    base = [int(digit) for digit in ID[:17]]
-    I = list(range(18, 1, -1))
-    WI = [2**(i-1) % 11 for i in I]
-    S = sum(digit * weight for digit, weight in zip(base, WI))
-    C = (12 - (S % 11)) % 11
-    C = 'X' if C == 10 else str(C)
-
-    whole_id = ''.join(map(str, base)) + C
-    return whole_id == ID
-is_valid_date_udf = udf(is_valid_date, BooleanType())
-is_ID_valid_udf = udf(is_ID_valid, BooleanType())
-filtered_data = spark_df.filter(col("National ID").rlike(general_pattern)) \
-                        .withColumn("Is Valid Date", is_valid_date_udf(col("National ID"))) \
-                        .withColumn("Is ID Valid", is_ID_valid_udf(col("National ID"))) \
-                        .filter(col("Is Valid Date") & col("Is ID Valid")) \
-                        .drop("Is Valid Date", "Is ID Valid") \
-                        .withColumnRenamed("National ID", "My Solution")
-filtered_data.show()
-
-
-```
 
 ### Solución usando Python en un Notebook en MicrosoftFabric
 
 Aquí está mi solución implementada en Python puro, aprovechando las bibliotecas de análisis de datos para una solución eficiente y escalable.
 
-![Solución Python](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/428_EXCEL_CHALLENGE_Python.png)
+![Solución Python](https://github.com/CristobalSalcedoDataBI/BI_Challenges/blob/b38d6cc9a12f8990ff1d9da8ce3973a52d6b3ce5/EXCEL_BI/438_EXCEL_CHALLENGE/Files/438_EXCEL_CHALLENGE_Python.png)
 
 Copiar Codigo aquí:
 
