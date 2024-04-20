@@ -24,7 +24,7 @@ Los valores deben expresarse en K (Kilo) / M (Mega) / G (Giga) Ohm o sin estos s
 1234567 = 1.234567 M Ohm
 1234567893 = 1,234567893 G Ohm
 
-![Descripción del desafío](https://github.com/cristobalsalcedo90/BI_Challenges/blob/72d089bb741fb3b3f5bbbded10d57f013b0fafa6/428_EXCEL_CHALLENGE/Files/ExcelBi.png)
+![Descripción del desafío](https://github.com/CristobalSalcedoDataBI/BI_Challenges/blob/e416b88e6c68b4841eaf1b9a45a7867d2b63066f/EXCEL_BI/438_EXCEL_CHALLENGE/Files/ExcelBi.png)
 
 La fuente del desafío puede encontrarse en el perfil de LinkedIn de Excel BI: [Excel BI LinkedIn Post](https://www.linkedin.com/posts/excelbi_excel-challenge-problem-activity-7186936560318111744-ys1D?utm_source=share&utm_medium=member_desktop)
 
