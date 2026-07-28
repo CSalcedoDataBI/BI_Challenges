@@ -301,6 +301,7 @@ Have a new challenge or solution? We welcome contributions!
 - 📖 [Power Query (M) Reference](https://docs.microsoft.com/en-us/powerquery-m/)
 - 📖 [Pandas Documentation](https://pandas.pydata.org/docs/)
 - 📖 [Jupyter Notebooks](https://jupyter.org/)
+- 📖 **[Power BI, Fabric & data engineering guides](https://csalcedodatabi.com/)** at csalcedodatabi.com — DAX, Python, M, and data-agent tutorials built on challenge-style problems
 
 ---
 
