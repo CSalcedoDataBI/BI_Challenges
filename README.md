@@ -281,7 +281,7 @@ Have a new challenge or solution? We welcome contributions!
 
 ## 📞 Support & Questions
 
-- 📧 **Email:** [csalcedo90@gmail.com](mailto:csalcedo90@gmail.com)
+- 📧 **Email:** [contacto@csalcedodatabi.com](mailto:contacto@csalcedodatabi.com)
 - 💼 **LinkedIn:** [Cristobal Salcedo](https://www.linkedin.com/in/cristobal-salcedo)
 - 🐛 **Issues:** [GitHub Issues](https://github.com/CSalcedoDataBI/BI_Challenges/issues)
 
